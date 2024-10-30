@@ -77,7 +77,7 @@ public class Main {
 
 	public static int evaluateMove(int[] freePosition, String[][] board){
 		board[freePosition[0]][freePosition[1]] = "X";
-		if (PlayerWon(board)){
+		if (playerCanWin(board)){
 			return 1;
 		}
 		else if (cpuCanWin(board)){
@@ -88,7 +88,7 @@ public class Main {
 		}
 	}
 
-	public static boolean PlayerWon(String[][] board){
+	public static boolean playerCanWin(String[][] board){
         // check all horizontal rows
         if (board[0][0].equals("X") && board[0][1].equals("X") && board[0][2].equals("X")){
             return true;
