@@ -33,7 +33,7 @@ public class Main {
 				System.out.println(lineRead); // print board
 				String[] terms = lineRead.split("");
 
-				for (int i = 0 ; i < terms.length ; i++){ // assign board to node and free spaces to utility map
+				for (int i = 0 ; i < terms.length ; i++){ // assign board to node and freeSpaces as key to utility map
 					board[lineCount][i] = terms[i];
 					if (terms[i].equals(".")){
 						int[] position = {lineCount, i};
@@ -56,7 +56,10 @@ public class Main {
 				int col = move[1];
 				System.out.println("y="+row + ", x="+col + ", utility=" + utility.get(move));
 			}
+			br.close();
+			fr.close();
 		}
+		
 	}
 
 	public static String[][] copyBoard(String[][] board){

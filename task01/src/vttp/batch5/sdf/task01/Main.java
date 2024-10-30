@@ -74,6 +74,8 @@ public class Main {
 			System.out.println();
 		}
         
+		br.close();
+		fr.close();
 
 
 
